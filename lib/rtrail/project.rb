@@ -51,12 +51,12 @@ module RTrail
       return self.suite(suite_name_or_id).id
     end
 
-    def plans
-      return get_entities(Plan, data.id)
+    def plans(filter={})
+      return get_entities(Plan, data.id, filter)
     end
 
-    def runs
-      return get_entities(Run, data.id)
+    def runs(filter={})
+      return get_entities(Run, data.id, filter)
     end
 
     def suites
